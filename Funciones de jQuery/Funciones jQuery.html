@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones jQuery</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Click</h1>
+        <button id="click">click</button>
+        <p>Haz click en el botón para que aparezca una alerta</p>
+        <script>
+            $(document).ready (function(){
+                $('#click').click(function(){
+                    alert('Haz hecho click')
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>Hide</h1>
+        <button id="click1">hide</button>
+        <p id="p1">Haz click en el botón para esconder el párrafo</p>
+        <script>
+            $(document).ready (function(){
+                $('#click1').click(function(){
+                    $('#p1').hide();
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>Show</h1>
+        <button id="click2">show</button>
+        <P>Haz click para que aparezca hola mundo</P>
+        <p id="p2">¡¡Hola mundo!!</p>
+        <script>
+            $(document).ready (function(){
+                $('#p2').hide();
+                  $('#click2').click(function(){
+                      $('#p2').show();
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>Toggle</h1>
+        <button id="click3">toggle</button>
+        <p id="p3">Haz click para hacer invisible y visible el párrafo</p>
+        <script>
+            $(document).ready (function(){
+                $('#click3').click (function(){
+                    $('#p3').toggle();
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>SlideDown</h1>
+        <button id="click4">slidedown</button>
+        <p>Haz click para deslizar un párrafo hacia abajo</p>
+        <p id="p4">All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. </p>
+        <script>
+            $(document).ready(function(){
+                $('#p4').hide();
+                    $('#click4').click (function(){
+                        $('#p4').slideDown(5000);
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>SlideUp</h1>
+        <button id="click5">slideup</button>
+        <p>Haz click para deslizar el párrafo hacia arriba</p>
+        <p id="p5">All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+            All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.</p>
+        <script>
+            $(document).ready(function(){
+                $('#click5').click (function(){
+                    $('#p5').slideUp(5000);
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>SlideToggle</h1>
+        <button id="click6">slidetoggle</button>
+        <p>Haz click para deslizar el texto hacia arriba y hacia abajo</p>
+        <P id="p6">¡Yo antes era un aventurero como tú, pero un día me hirieron con una flecha en la rodilla!</P>
+        <script>
+            $(document).ready(function(){
+                $('#click6').click (function(){
+                    $('#p6').slideToggle();
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>FadeIn</h1>
+        <button id="click7">fadein</button>
+        <p>Haz click para que aparezca el texto</p>
+        <p id="p7">¡Yo antes era un aventurero como tú, pero un día me hirieron con una flecha en la rodilla!</p>
+        <script>
+            $(document).ready(function(){
+                $('#p7').hide();       
+                    $('#click7').click (function(){
+                            $('#p7').fadeIn(3000);
+                        })
+                    });
+        </script>
+    </div>
+   
+    <div>
+        <h1>FadeOut</h1>
+        <button id="click8">fadeout</button>
+        <p>Haz click para que el texto se desvanezca</p>
+        <p id="p8">"¿Tú eres el rey? Bueno, yo no te he votado nunca."</p>
+        <script>
+            $(document).ready(function(){
+                $('#click8').click (function(){
+                    $('#p8').fadeOut(4000);
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>AddClass</h1>
+        <button id="click9">addclass</button>
+        <p id="p9">Haz click para agregar una clase</p>
+        <script>
+            $(document).ready(function(){
+                $('#click9').click(function(){
+                    $('#p9').addClass('nuevaClase');
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>Before</h1>
+        <button id="click10">before</button>
+        <p id="px">Haz click para agregar un texto anterior</p>
+        <p id="p10">Esto va antes</p>
+        <script>
+            $(document).ready(function(){
+                $('#p10').hide();   
+                    $('#click10').click(function(){
+                        $('#px').before('Esto va antes ');
+                    })
+                });
+        </script>
+    </div>
+    <div>
+        <h1>After</h1>
+        <button id="click11">after</button>
+        <p id="pz">Haz click para agregar el siguiente texto</p>
+        <p id="p11">Esto va después</p>
+        <script>
+            $(document).ready(function(){
+                $('#p11').hide();
+                    $('#click11').click(function(){
+                        $('#pz').after('Esto va después ');
+                    })
+                });
+        </script>
+    </div>
+    <div>
+        <h1>Append</h1>
+        <button id="click12">append</button>
+        <p id="p12">Haz click para agregar más texto</p>
+        <script>
+            $(document).ready(function(){
+                $('#click12').click(function(){
+                    $('#p12').append(' más texto');
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1 id="h0">Html</h1>
+        <button id="click13">html</button>
+        <p>Haz click para agregar para cambiar el encabezado</p>
+        <script>
+            $(document).ready(function(){
+                $('#click13').click(function(){
+                    $('#h0').html('Hola mundo');
+                })
+            });
+        </script>  
+    </div>
+    <div>
+        <h1>Attr</h1>
+        <button id="click14">attr</button>
+        <p>Haz click para cambiar el tamaño el tamaño de la imagen</p>
+        <img src= jq.png>
+        <script>
+            $(document).ready(function(){
+                $('#click14').click(function(){
+                    $('img').attr('width', '100');
+                })
+            });
+        </script>
+    </div>
+    <div>
+        <h1>Val</h1>
+        <button id="click15">val</button>
+        <p>Click para mostrar Hola mundo</p>
+        <p><input type="text" name="evento"></p>
+        <script>
+            $(document).ready(function(){
+              $('#click15').click(function(){
+                $('input:text').val('Hola mundo!!!');
+              })
+            });
+            </script>
+    </div>
+    <div>
+        <h1>Text</h1>
+        <button id="click16">text</button>
+        <p>Click para cambiar el todos los párrafos a hola mundo</p>
+        <script>
+            $(document).ready(function(){
+                $('#click16').click(function(){
+                    $('p').text('Hola mundo');
+                })
+            });
+        </script>
+    </div>
+</body>
+</html>
